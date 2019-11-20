@@ -6,6 +6,9 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__)
 app.secret_key = 'fbd1eefad885bf835e1d5ea884244221'
 
+@app.errorhandler(404)
+def err_404(error):
+   return render_template( '404.html' ), 404
 
 @app.route('/')
 @app.route('/index')

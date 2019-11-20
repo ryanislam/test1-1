@@ -1,6 +1,9 @@
 
+
+
 posts = [
     {
+        'id':3,
         'author': 'Corey Schafer',
         'title': 'Blog Post 1',
         'content': 'First post content',
