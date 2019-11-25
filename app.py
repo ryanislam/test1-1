@@ -1,5 +1,4 @@
 
-
 from flask import Flask, url_for, render_template, request
 
 
@@ -42,7 +41,14 @@ def handle_data():
     msg_class= "alert alert-success")
 
 
+# print("-- DEBUG MODE ----")
+# app.run(debug=True, port='5555')
 
-app.run(debug=True, port='5555')
+import os
+from waitress import serve
+
+print("--PRODUCTION MODE ---")
+p = os.environ.get('PORT')
+serve(app, host='0.0.0.0', port=p)
 
 
