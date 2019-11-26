@@ -29,6 +29,10 @@ def table_example():
 def login():
   return render_template('login.html', title='Login')
 
+@app.route('/fake_data')
+def fake_data():
+  return render_template('fake_data.html', title='Fake Data')  
+
 
 @app.route('/handle_data', methods=['GET','POST'])
 def handle_data():
